@@ -1,4 +1,4 @@
-import { Router, Request, Response } from "express";
+import { Router } from "express";
 import { cats, dogs, fishes, home } from "../controllers/pageController";
 import { search } from "../controllers/searchController";
 

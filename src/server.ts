@@ -13,12 +13,11 @@ server.set('views', path.join(__dirname, 'views'))
 server.engine('mustache', mustacheExpress())
 //configuração para tornar a pasta public acessível
 server.use(express.static(path.join(__dirname, '../public')))
-
 //rotas
 server.use(mainRoutes)
 
 server.use((req,res) => {
-    res.status(404).send('página não encontrada')
+    res.render('pages/404')
 })
 
 
